@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Lazy Loader</title>
+		<script src="lazy-load.js" charset="utf-8" async></script>
+		<style media="screen">
+			body {
+				width:100%;
+				height:auto;
+				padding:3em;
+				margin:0;
+				box-sizing:border-box;
+			}
+			img {
+				max-width:100%;
+			}
+			.no-js img[loading='lazy'] {
+				opacity:1;
+			}
+			img[loading='lazy'] {
+				opacity:0;
+				transition: 400ms ease-out;
+			}
+			img[loading='lazy'].loaded {
+				opacity:1;
+				transition: 400ms ease-out;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>This is an example of native lazy loading with fade-in effects.</h1>
+		<h2>Woods</h2>
+		<img src="./images/beech.jpg" loading="lazy" alt="">
+		<img src="./images/Maple-Curly-Cluster.jpg" loading="lazy" alt="">
+		<img src="./images/maple.jpg" loading="lazy" alt="">
+		<img src="./images/Tiger-Maple.jpg" loading="lazy" alt="">
+		<img src="./images/tree-rings.jpg" loading="lazy" alt="">
+		<img src="./images/walnutdark.jpg" loading="lazy" alt="">
+	</body>
+</html>
